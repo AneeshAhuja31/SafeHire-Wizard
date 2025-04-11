@@ -27,7 +27,7 @@ class GoogleSearchClient:
             # Build the API client for Google Search
             self.service = build('customsearch', 'v1', developerKey=self.api_key)
             #self.search_engine_id = os.getenv('GOOGLE_SEARCH_ENGINE_ID', 'YOUR_SEARCH_ENGINE_ID')
-            self.search_engine_id = '0597815c0a75e4879'
+            self.search_engine_id = os.getenv('SEARCH_ENGINE_ID')
             
             print("Google Search API client initialized successfully")
         except Exception as e:
